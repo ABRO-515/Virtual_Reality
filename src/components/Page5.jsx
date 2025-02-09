@@ -10,7 +10,7 @@ const Page5 = () => {
     return (
         <>
             <main className='w-full h-full' id='testimonials' >
-                <div className='h-fit  flex flex-col items-center  border-b border-neutral-700git' >
+                <div className='h-fit  flex flex-col items-center  border border-neutral-700 ' >
                     <h1 className='mb-16 text-3xl px-8 text-center' >What People Are Saying</h1>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-6">
@@ -26,7 +26,7 @@ const Page5 = () => {
                                 <div className="flex gap-4 flex-row items-center">
                                     <img className='border rounded-full h-16 ' src={user1} alt="" />
                                     <div className="flex flex-col gap-2 ">
-                                        <h2>Elsa</h2>
+                                        <h2>Ammar</h2>
                                         <h4 className='text-neutral-600' >Stellar Technologies</h4>
                                     </div>
                                 </div>

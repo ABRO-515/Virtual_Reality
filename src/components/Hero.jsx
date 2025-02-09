@@ -1,8 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import video1 from '../assets/video1.mp4'
 import video2 from '../assets/video2.mp4'
 
 const Hero = () => {
+
+useEffect(() => {
+    const video1Element =  document.getElementById('video1')
+    const video2Element =  document.getElementById('video2')
+
+    if(video1Element && video2Element){
+        video1Element.play().catch(error=> {
+            console.log("video 1 is not autoplayed: ", error);
+            
+        })
+        video2Element.play().catch(error=>{
+            console.log("Video 2 is not autoplayed: ", error);
+            
+        })
+    }
+}, [])
+
+
+
     return (
         <>
      {/* Preload videos */}
@@ -33,10 +52,10 @@ const Hero = () => {
 
                     {/* videos  */}
                     <div className="flex gap-3  sm:my-20 my-8 mx-1 ">
-                        <video className='  2xl:h-72 sm:h-40  h-[25vw] rounded-md border border-orange-700 shadow-sm shadow-orange-400' muted autoPlay loop playsInline preload='auto' defaultMuted>
+                        <video id='video1'  className='  2xl:h-72 sm:h-40  h-[25vw] rounded-md border border-orange-700 shadow-sm shadow-orange-400' muted autoPlay loop playsInline preload='auto' defaultMuted>
                             <source src={video1} type="video/mp4" />
                         </video>
-                        <video className='  2xl:h-72 sm:h-40  h-[25vw] rounded-md border border-orange-700 shadow-sm shadow-orange-400' muted autoPlay loop playsInline preload='auto' defaultMuted>
+                        <video id='video2' className='  2xl:h-72 sm:h-40  h-[25vw] rounded-md border border-orange-700 shadow-sm shadow-orange-400' muted autoPlay loop playsInline preload='auto' defaultMuted>
                             <source src={video2} type="video/mp4" />
                         </video>
 
