@@ -4,24 +4,6 @@ import video2 from '../assets/video2.mp4'
 
 const Hero = () => {
 
-useEffect(() => {
-    const video1Element =  document.getElementById('video1')
-    const video2Element =  document.getElementById('video2')
-
-    if(video1Element && video2Element){
-        video1Element.play().catch(error=> {
-            console.log("video 1 is not autoplayed: ", error);
-            
-        })
-        video2Element.play().catch(error=>{
-            console.log("Video 2 is not autoplayed: ", error);
-            
-        })
-    }
-}, [])
-
-
-
     return (
         <>
      {/* Preload videos */}

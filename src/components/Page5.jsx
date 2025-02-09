@@ -10,7 +10,7 @@ const Page5 = () => {
     return (
         <>
             <main className='w-full h-full' id='testimonials' >
-                <div className='h-fit  flex flex-col items-center  border border-neutral-700 ' >
+                <div className='h-fit  flex flex-col items-center  border-b border-neutral-700 ' >
                     <h1 className='mb-16 text-3xl px-8 text-center' >What People Are Saying</h1>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-6">
