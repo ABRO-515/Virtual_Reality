@@ -9,9 +9,9 @@ import { Fingerprint } from 'lucide-react';
 const Page2 = () => {
     return (
         < >
-            <main className='w-full h-full' >
-                <div className='flex flex-col items-center justify-normal h-fit border-b border-neutral-600' >
-                    <h2 className='bg-[#171717] px-3 w-fit rounded-[20px] py-2 text-orange-500 ' >Feature</h2>
+            <main className='w-full h-full'  >
+                <div id='features' className='flex flex-col items-center justify-normal h-fit border-b border-neutral-600' >
+                    <h2 className='bg-[#171717] px-3 w-fit rounded-[20px] py-2 text-orange-500 ' >Features</h2>
 
                     {/* Text box */}
                     <div className='flex gap-2  mt-10 px-4 text-center' >

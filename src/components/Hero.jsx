@@ -5,6 +5,11 @@ import video2 from '../assets/video2.mp4'
 const Hero = () => {
     return (
         <>
+     {/* Preload videos */}
+     <link rel="preload" as="video" href={video1} type="video/mp4" />
+            <link rel="preload" as="video" href={video2} type="video/mp4" />
+
+
             <main className='w-full h-full' >
                 <div className='xl:mt-44  mt-16  lg:min-h-screen h-screen  flex flex-col items-center justify-center'>
                     {/* Text-Box */}
@@ -27,13 +32,13 @@ const Hero = () => {
 
 
                     {/* videos  */}
-<div className="flex gap-3  sm:my-20 my-8 mx-1 ">
-                    <video className='  2xl:h-72 sm:h-40  h-[25vw] rounded-md border border-orange-700 shadow-sm shadow-orange-400' muted autoPlay loop playsInline   >
-                        <source src={video1} type="video/mp4" />
-                    </video>
-                    <video className='  2xl:h-72 sm:h-40  h-[25vw] rounded-md border border-orange-700 shadow-sm shadow-orange-400' muted autoPlay loop playsInline   >
-                        <source src={video2} type="video/mp4" />
-                    </video>
+                    <div className="flex gap-3  sm:my-20 my-8 mx-1 ">
+                        <video className='  2xl:h-72 sm:h-40  h-[25vw] rounded-md border border-orange-700 shadow-sm shadow-orange-400' muted autoPlay loop playsInline preload='auto' defaultMuted>
+                            <source src={video1} type="video/mp4" />
+                        </video>
+                        <video className='  2xl:h-72 sm:h-40  h-[25vw] rounded-md border border-orange-700 shadow-sm shadow-orange-400' muted autoPlay loop playsInline preload='auto' defaultMuted>
+                            <source src={video2} type="video/mp4" />
+                        </video>
 
                     </div>
 

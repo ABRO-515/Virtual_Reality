@@ -9,7 +9,7 @@ import user6 from '../assets/profile-pictures/user6.jpg'
 const Page5 = () => {
     return (
         <>
-            <main className='w-full h-full' >
+            <main className='w-full h-full' id='testimonials' >
                 <div className='h-fit  flex flex-col items-center  border-b border-neutral-700git' >
                     <h1 className='mb-16 text-3xl px-8 text-center' >What People Are Saying</h1>
 

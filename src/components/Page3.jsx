@@ -7,7 +7,7 @@ import { Check } from 'lucide-react';
 const Page3 = () => {
     return (
         <>
-            <main className='w-full h-full' >
+            <main className='w-full h-full' id='workflow' >
                 <div className="h-fit flex flex-col items-center mb-24">
                     {/* Text box */}
                     <div className='flex gap-2  mt-16 px-4 text-center' >

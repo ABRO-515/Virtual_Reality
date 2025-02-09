@@ -4,7 +4,7 @@ import { Check } from 'lucide-react';
 const Page4 = () => {
     return (
         <>
-            <main className='w-full h-full' >
+            <main className='w-full h-full' id='pricing' >
                 <div className="h-fit flex flex-col items-center mb-16">
                     <h1 className='text-4xl mb-16' >Pricing</h1>
 

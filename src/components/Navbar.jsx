@@ -3,9 +3,17 @@ import logo from "../assets/logo.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+const closeMenu = ()=>{
+  setIsOpen(false)
+}
+
+
+
 
   return (
     <>
@@ -16,18 +24,11 @@ const Navbar = () => {
           <h1>VirtualR</h1>
         </div>
         <ul className="hidden lg:flex gap-5 text-base">
-          <a href="#">
-            <li>Features</li>
-          </a>
-          <a href="#">
-            <li>Pricing</li>
-          </a>
-          <a href="#">
-            <li>Workflow</li>
-          </a>
-          <a href="#">
-            <li>Testimonials</li>
-          </a>
+
+          <li className="cursor-pointer hover:text-gray-300" ><Link to="features" smooth={true} duration={500} >Features</Link></li>
+          <li className="cursor-pointer hover:text-gray-300" ><Link to="workflow" smooth={true} duration={500} >Workflow</Link></li>
+          <li className="cursor-pointer hover:text-gray-300" ><Link to="pricing" smooth={true} duration={500} >Pricing</Link></li>
+          <li className="cursor-pointer hover:text-gray-300" ><Link to="testimonials" smooth={true} duration={500} >Testimonials</Link></li>
         </ul>
         <div className="btns hidden lg:flex gap-2 text-sm">
           <button className="bg-transparent border py-2 px-3 rounded-md">
@@ -57,19 +58,13 @@ const Navbar = () => {
         animate={{ height: isOpen ? "auto" : 0 }}
         className="overflow-hidden bg-[#121212] text-white fixed top-14 left-0 w-full z-40 lg:hidden shadow-md"
       >
-        <ul className="flex flex-col gap-5 p-5 text-lg">
-          <a href="#">
-            <li>Features</li>
-          </a>
-          <a href="#">
-            <li>Workflow</li>
-          </a>
-          <a href="#">
-            <li>Pricing</li>
-          </a>
-          <a href="#">
-            <li>Testimonials</li>
-          </a>
+        <ul className="flex flex-col gap-5 p-5 text-lg"   >
+
+          <li  className="hover:text-gray-300" ><Link to="features" smooth={true} duration={500}  onClick={()=>(setIsOpen(closeMenu))} >Features</Link></li>
+          <li className="hover:text-gray-300" ><Link to="workflow" smooth={true} duration={500} onClick={()=>(setIsOpen(closeMenu))} >Workflow</Link></li>
+          <li className="hover:text-gray-300" ><Link to="pricing" smooth={true} duration={500} onClick={()=>(setIsOpen(closeMenu))} >Pricing</Link></li>
+          <li className="hover:text-gray-300" ><Link to="testimonials" smooth={true} duration={500} onClick={()=>(setIsOpen(closeMenu))} >Testimonials</Link></li>
+
         </ul>
         <div className="flex flex-col items-center gap-3 px-5 pt-2 pb-6">
           <button className="bg-transparent border py-2 px-3 rounded-md w-full">
